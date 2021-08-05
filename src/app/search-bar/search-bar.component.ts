@@ -18,7 +18,6 @@ export class SearchBarComponent implements OnInit {
 
   search(){
     this.searchMovies.emit(this.searchQuery)
-    this.searchQuery = ""
   }
 
 }
