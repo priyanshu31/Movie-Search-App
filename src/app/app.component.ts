@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Movie-Search-App';
+
+  searchMovies(searchQuery: string){
+    console.log(searchQuery)
+  }
+  
 }

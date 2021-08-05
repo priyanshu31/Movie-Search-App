@@ -1,7 +1,6 @@
 <div class="continer-fluid main-container">
   <h2 class="heading">Welcome to Movie Search App!!</h2>
-  <div class="d-flex search-bar container">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </div>
+  
+  <app-search-bar (searchMovies) = "searchMovies($event)"></app-search-bar>
+
 </div>
