@@ -5,7 +5,7 @@
   
   <div *ngIf="searchResults" class="container my-4">
   
-    <app-result-display [movie] = "apiResponse" (Bookmark) = "Bookmark()"></app-result-display>
+    <app-result-display [movie] = "apiResponse" [imdbID] = "imdbID" (Bookmark) = "Bookmark()"></app-result-display>
   
   </div>
 

@@ -7,5 +7,8 @@
       <li class="list-group-item">Year of Realease: {{movie.yearOfRealease}}</li>
       <li class="list-group-item">IMDB Rating: {{movie.imdbRating}}</li>
     </ul>
-    <button class="btn btn-primary" (click) = "bookmark()">Bookmark</button>
+    <button *ngIf="!bookmarked; else already_bookmarked" class="btn btn-primary" (click) = "bookmark()">Bookmark</button>
+    <ng-template #already_bookmarked>
+      <button class="btn btn-secondary">Already Bookmared</button>
+    </ng-template>
   </div>

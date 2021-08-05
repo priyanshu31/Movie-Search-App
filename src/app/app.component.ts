@@ -13,6 +13,7 @@ export class AppComponent {
   searchResults = false;
   searchQuery: string;
   apiResponse: Movie;
+  imdbID: string;
 
   async searchMovies(searchQuery: string){
 
@@ -26,6 +27,8 @@ export class AppComponent {
       imdbRating: res.data.imdbRating,
       yearOfRealease: res.data.Year
     }
+
+    this.imdbID = res.data.imdbID
     
     console.log(this.apiResponse)
 
@@ -40,9 +43,8 @@ export class AppComponent {
     if(localbookmarks)
       bookmarks = JSON.parse(localbookmarks)
 
-    bookmarks.push(this.apiResponse)
+    bookmarks.push(this.imdbID)
 
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
   }
-  
 }
