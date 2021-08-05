@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; margin: auto;">
     <img src="{{movie.image}}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{movie.title}}</h5>
@@ -7,4 +7,5 @@
       <li class="list-group-item">Year of Realease: {{movie.yearOfRealease}}</li>
       <li class="list-group-item">IMDB Rating: {{movie.imdbRating}}</li>
     </ul>
+    <button class="btn btn-primary" (click) = "bookmark()">Bookmark</button>
   </div>

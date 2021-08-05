@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter } from '@angular/core';
 import { Movie } from '../Movie';
 
 @Component({
@@ -9,10 +9,15 @@ import { Movie } from '../Movie';
 export class ResultDisplayComponent implements OnInit {
 
   @Input() movie: Movie;
+  @Output() Bookmark: EventEmitter<null> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  bookmark() {
+    this.Bookmark.emit()
   }
 
 }

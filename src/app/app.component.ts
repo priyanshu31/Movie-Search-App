@@ -23,7 +23,6 @@ export class AppComponent {
     this.apiResponse = {
       title: res.data.Title,
       image: res.data.Poster,
-      imdbId: res.data.imdbID,
       imdbRating: res.data.imdbRating,
       yearOfRealease: res.data.Year
     }
@@ -32,6 +31,18 @@ export class AppComponent {
 
     this.searchResults = true
     this.searchQuery = searchQuery
+  }
+
+  Bookmark() {
+    console.log("Bookmark Requested")
+    let localbookmarks = localStorage.getItem("bookmarks")
+    let bookmarks = []
+    if(localbookmarks)
+      bookmarks = JSON.parse(localbookmarks)
+
+    bookmarks.push(this.apiResponse)
+
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
   }
   
 }
