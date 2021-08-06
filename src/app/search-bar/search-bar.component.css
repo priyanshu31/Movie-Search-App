@@ -1,7 +1,9 @@
+/* setting width of search-bar to 40% */
 .search-bar{
     width: 40%;
 }
 
+/* giving margin of 4px to our buttons using custom-btn class */
 .custom-btn {
     margin: 4px;
 }

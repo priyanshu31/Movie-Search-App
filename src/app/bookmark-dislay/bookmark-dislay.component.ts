@@ -8,6 +8,7 @@ import { Movie } from '../Movie';
 })
 export class BookmarkDislayComponent implements OnInit {
 
+  // Taking Movie object movie as input to display in form of card
   @Input() movie: Movie;
 
   constructor() { }

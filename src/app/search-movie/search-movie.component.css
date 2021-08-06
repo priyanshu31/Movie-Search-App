@@ -1,7 +1,9 @@
+/* aligning all the items in main-container at the center */
 .main-container{
     text-align: center;
 }
 
+/* giving 2 rem of margin to the heading */
 .heading{
     margin: 2rem;
 }

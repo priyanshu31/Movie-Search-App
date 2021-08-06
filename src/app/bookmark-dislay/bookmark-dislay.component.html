@@ -1,7 +1,14 @@
+<!-- Component to display bookmarked movies in form of card -->
+
+<!-- img tag to display image object in the card -->
 <img src="{{movie.image}}" class="card-img-top" alt="...">
+
+<!-- displaying the title of movie -->
 <div class="card-body">
     <h5 class="card-title">{{movie.title}}</h5>
 </div>
+
+<!-- displaying Year of Release and IMDB Rating in form of list -->
 <ul class="list-group list-group-flush">
     <li class="list-group-item">Year of Realease: {{movie.yearOfRealease}}</li>
     <li class="list-group-item">IMDB Rating: {{movie.imdbRating}}</li>

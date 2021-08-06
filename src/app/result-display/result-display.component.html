@@ -1,14 +1,29 @@
+<!-- Component to display results of search component in form of a class -->
+
 <div class="card" style="width: 18rem; margin: auto;">
-    <img src="{{movie.image}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{movie.title}}</h5>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Year of Realease: {{movie.yearOfRealease}}</li>
-      <li class="list-group-item">IMDB Rating: {{movie.imdbRating}}</li>
-    </ul>
-    <button *ngIf="!bookmarked; else already_bookmarked" class="btn btn-primary" (click) = "bookmark()">Bookmark</button>
-    <ng-template #already_bookmarked>
-      <button class="btn btn-secondary">Already Bookmared</button>
-    </ng-template>
+
+  <!-- img tag to display the image of movie recieved from search-movie component -->
+  <img src="{{movie.image}}" class="card-img-top" alt="...">
+  
+  <!-- To show the title of movie -->
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
   </div>
+
+  <!-- List to display Year of Release and IMDB Rating of Movie -->
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Year of Realease: {{movie.yearOfRealease}}</li>
+    <li class="list-group-item">IMDB Rating: {{movie.imdbRating}}</li>
+  </ul>
+
+  <!-- Showing the Bookmark satus -->
+  <!-- If the movie is not Bookmarked and giving the option to user to bookmark that movie -->
+  <!-- calling the bookmark method to bookmark the movie as the user click to bookmark -->
+  <button *ngIf="!bookmarked; else already_bookmarked" class="btn btn-primary" (click) = "bookmark()">Bookmark</button>
+  
+  <!-- If already bookmarked than showing the user that the searched movie is already bookmarked -->
+  <ng-template #already_bookmarked>
+    <button class="btn btn-secondary">Already Bookmared</button>
+  </ng-template>
+
+</div>

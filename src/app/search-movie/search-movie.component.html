@@ -1,10 +1,17 @@
 <div class="continer-fluid main-container">
     <h2 class="heading">Welcome to Movie Search App!!</h2>
     
+    <!-- app-search-bar component to display search bar -->
+    <!-- searchMovies method to recieve searched string and make a request on API -->
     <app-search-bar (searchMovies) = "searchMovies($event)"></app-search-bar>
     
+    <!-- Using ngIf directive to ensure that search is done before displaying -->
     <div *ngIf="searchResults" class="container my-4">
     
+      <!-- app-result-display component to display the result in form oof a card -->
+      <!-- passing apiResponse as movie in input to display -->
+      <!-- passing imdbID as imdbID in input to store in localStorage if user bookmarks the searched movie -->
+      <!-- Bookmark method to bookmark the movie requested by user -->
       <app-result-display [movie] = "apiResponse" [imdbID] = "imdbID" (Bookmark) = "Bookmark()"></app-result-display>
     
     </div>

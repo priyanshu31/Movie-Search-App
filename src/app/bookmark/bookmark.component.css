@@ -1,12 +1,23 @@
+/* aligning all the content of main-container to the center */
 .main-container{
     text-align: center;
 }
 
+/* giving margin of 2rem to the heading */
 .heading{
     margin: 2rem;
 }
 
+/* giving margin and padding using custom-btn class */
 .custom-btn {
     margin: 0.5rem;
     padding: 0.3rem;
+}
+
+/* styling movie cards using movie-card class */
+.movie-card {
+    width: 15rem !important; 
+    margin: 1rem; 
+    padding: 0; 
+    display: inline-block;
 }

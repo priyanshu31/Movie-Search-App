@@ -1,12 +1,21 @@
+<!-- Component to display Bookmark page -->
+
+<!-- button to go Back to Home Page -->
+<!-- Routing to Home Page '/' using routerLink -->
 <button class="btn btn-outline-success custom-btn" routerLink='/'>Back to Home</button>
+
+<!-- main-container of Bookmark Page -->
 <div class="continer-fluid main-container">
 
-
+    <!-- Bookmark Page Heading -->
     <h2 class="heading">Bookmarked Movies!!</h2>
 
-    <div *ngFor="let movie of movies" class="card border-dark mb-3" style="width: 15rem !important; margin: 1rem; padding: 0; display: 
-    inline-block;">
+    <!-- using ngFor directive to iterate the whole movies array to display all the bookmarked movie one by one -->
+    <div *ngFor="let movie of movies" class="card border-dark mb-3 movie-card">
+
+        <!-- app-bookmark-display component to display a single movie card by passing movie object -->
         <app-bookmark-dislay [movie] = "movie"></app-bookmark-dislay>
+
     </div>
     
 </div>
