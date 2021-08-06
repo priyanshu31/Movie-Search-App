@@ -1,12 +1,1 @@
-<div class="continer-fluid main-container">
-  <h2 class="heading">Welcome to Movie Search App!!</h2>
-  
-  <app-search-bar (searchMovies) = "searchMovies($event)"></app-search-bar>
-  
-  <div *ngIf="searchResults" class="container my-4">
-  
-    <app-result-display [movie] = "apiResponse" [imdbID] = "imdbID" (Bookmark) = "Bookmark()"></app-result-display>
-  
-  </div>
-
-</div>
+<router-outlet></router-outlet>

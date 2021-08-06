@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultDisplayComponent } from './result-display/result-display.component';
+import { BookmarkComponent } from './bookmark/bookmark.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    ResultDisplayComponent
+    ResultDisplayComponent,
+    BookmarkComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
