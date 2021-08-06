@@ -1,9 +1,11 @@
+<button class="btn btn-outline-success custom-btn" routerLink='/'>Back to Home</button>
 <div class="continer-fluid main-container">
+
 
     <h2 class="heading">Bookmarked Movies!!</h2>
 
     <div *ngFor="let movie of movies" class="card border-dark mb-3" style="width: 15rem !important; margin: 1rem; padding: 0; display: 
-    inline-block; height: 10rem;">
+    inline-block;">
         <app-bookmark-dislay [movie] = "movie"></app-bookmark-dislay>
     </div>
     
