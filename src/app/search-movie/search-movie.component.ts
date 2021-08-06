@@ -30,6 +30,8 @@ export class SearchMovieComponent implements OnInit {
   // imdbID to store and pass the imdbID od searched Movie
   imdbID: string;
 
+  movie_not_found = false;
+
   // searchMovies function to accept the query and make a api request to get the response from the API
   // as we are using await for our api request we should make this function async 
   async searchMovies(searchQuery: string){
@@ -49,11 +51,18 @@ export class SearchMovieComponent implements OnInit {
     // storing imdbID of our Movie
     this.imdbID = res.data.imdbID
     
-    console.log(this.apiResponse)
+    console.log(res)
 
-    // Making searchResults true to display the data in form of a card
-    this.searchResults = true
-    this.searchQuery = searchQuery
+    if(res.data.Response == "True") {
+
+      // Making searchResults true to display the data in form of a card
+      this.searchResults = true
+      this.searchQuery = searchQuery
+
+    } else 
+        this.movie_not_found = true
+    
+  
   }
 
   // Bookmark method to bookmark the movie requested by user

@@ -15,5 +15,12 @@
       <app-result-display [movie] = "apiResponse" [imdbID] = "imdbID" (Bookmark) = "Bookmark()"></app-result-display>
     
     </div>
+
+    <div *ngIf="movie_not_found" class="container my-4">
+    
+      <h5>Movie Not Found</h5>
+    
+    </div>
+
   
 </div>
