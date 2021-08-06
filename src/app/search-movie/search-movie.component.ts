@@ -50,8 +50,6 @@ export class SearchMovieComponent implements OnInit {
 
     // storing imdbID of our Movie
     this.imdbID = res.data.imdbID
-    
-    console.log(res)
 
     if(res.data.Response == "True") {
 
