@@ -26,8 +26,6 @@ export class BookmarkComponent implements OnInit {
 
   async getBookmarkMovies(imdbIDs: string[]) {
     
-    let movieList;
-
     imdbIDs.forEach(async (imdbID) => {
 
       // Fetching Movies thorugh imdbID Results

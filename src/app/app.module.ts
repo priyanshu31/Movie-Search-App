@@ -8,6 +8,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultDisplayComponent } from './result-display/result-display.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { BookmarkDislayComponent } from './bookmark-dislay/bookmark-dislay.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SearchMovieComponent } from './search-movie/search-movie.component';
     SearchBarComponent,
     ResultDisplayComponent,
     BookmarkComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    BookmarkDislayComponent
   ],
   imports: [
     BrowserModule,
